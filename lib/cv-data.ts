@@ -34,8 +34,8 @@ export const cv = {
     },
   ],
   regions: [
-    { name: "KwaZulu-Natal", years: "10+ yrs" },
-    { name: "Gauteng", years: "10+ yrs" },
+    { name: "KwaZulu-Natal", years: "8+ yrs" },
+    { name: "Gauteng", years: "3+ yrs" },
   ],
   profileLead:
     "Sales and key account professional with 10+ years in building materials, contractor sales, retail operations, and regional account management across South Africa.",
