@@ -18,10 +18,10 @@ export function Hero() {
   return (
     <header
       ref={ref}
-      className="relative max-w-[1280px] mx-auto px-5 sm:px-6 md:px-12 pt-20 sm:pt-24 md:pt-28 pb-12 md:pb-20"
+      className="relative max-w-[1280px] mx-auto px-5 sm:px-6 md:px-12 pt-14 sm:pt-16 md:pt-20 pb-8 md:pb-14"
     >
       {/* Top row: eyebrow + (mobile portrait on right) / (desktop CV label) */}
-      <div className="flex items-start justify-between gap-4 mb-6 md:mb-10">
+      <div className="flex items-start justify-between gap-4 mb-4 md:mb-8">
         <motion.span
           className="eyebrow mt-1 md:mt-2"
           initial={{ opacity: 0 }}
@@ -53,12 +53,12 @@ export function Hero() {
       </div>
 
       {/* Name + desktop portrait */}
-      <div className="grid md:grid-cols-[1fr_auto] gap-8 md:gap-14 items-start">
+      <div className="grid md:grid-cols-[1fr_auto] gap-6 md:gap-12 items-start">
         <div className="min-w-0">
           <AnimatedName name={cv.name} />
 
           <motion.p
-            className="font-mono-plex text-[11.5px] tracking-[.18em] uppercase mt-5 md:mt-8 inline-flex items-center gap-3"
+            className="font-mono-plex text-[11.5px] tracking-[.18em] uppercase mt-3 md:mt-5 inline-flex items-center gap-3"
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.0, duration: .8 }}
@@ -73,7 +73,7 @@ export function Hero() {
 
           <motion.p
             style={{ y: taglineY }}
-            className="font-serif-news mt-5 md:mt-8 text-[clamp(17px,2.4vw,30px)] leading-[1.4] md:leading-[1.32] max-w-[34ch]"
+            className="font-serif-news mt-4 md:mt-6 text-[clamp(17px,2.4vw,30px)] leading-[1.4] md:leading-[1.32] max-w-[34ch]"
           >
             {words.map((w, i) => (
               <span key={i} className="inline-block reveal-mask mr-[0.28em]">
@@ -101,7 +101,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.94 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.4, duration: 1.1, ease: [0.2, 0.7, 0.2, 1] }}
-          className="relative shrink-0 hidden md:block mt-4"
+          className="relative shrink-0 hidden md:block mt-0"
         >
           <PortraitFrame size="desktop" />
           <div
@@ -121,7 +121,7 @@ export function Hero() {
         whileInView={{ scaleX: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1.2, ease: [0.2, 0.7, 0.2, 1], delay: 0.2 }}
-        className="rule mt-12 md:mt-20 origin-left"
+        className="rule mt-8 md:mt-14 origin-left"
       />
     </header>
   );
@@ -171,7 +171,7 @@ function ContactStrip() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: 1.3, duration: .8 }}
-      className="mt-10 md:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-5 md:gap-12"
+      className="mt-8 md:mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-12"
     >
       {items.map((it) => (
         <div key={it.label} className="flex flex-col gap-1">
