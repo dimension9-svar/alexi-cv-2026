@@ -9,7 +9,7 @@ export function Skills() {
   return (
     <section
       id="skills"
-      className="max-w-[1280px] mx-auto px-6 md:px-12 py-14 md:py-24"
+      className="max-w-[1280px] mx-auto px-5 sm:px-6 md:px-12 py-12 md:py-24"
     >
       <div className="flex items-baseline justify-between mb-10 md:mb-14">
         <Reveal>

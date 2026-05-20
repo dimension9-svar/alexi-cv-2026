@@ -32,31 +32,40 @@ function CountUp({ value, prefix = "" }: { value: string; prefix?: string }) {
 
 export function Stats() {
   return (
-    <section className="max-w-[1280px] mx-auto px-6 md:px-12 py-12 md:py-20">
+    <section className="max-w-[1280px] mx-auto px-6 md:px-12 py-10 md:py-20">
       <div
-        className="grid grid-cols-2 md:grid-cols-4 border-t border-b"
+        className="grid grid-cols-2 md:grid-cols-4 border-t"
         style={{ borderColor: "var(--rule)" }}
       >
-        {cv.stats.map((s, i) => (
-          <div
-            key={i}
-            className="py-8 md:py-10 px-4 md:px-8 border-r last:border-r-0"
-            style={{ borderColor: "var(--rule)" }}
-          >
+        {cv.stats.map((s, i) => {
+          const lastCol = (i + 1) % 2 === 0; // mobile 2-col: even idx = right column
+          const lastColMd = i === cv.stats.length - 1;
+          const bottomRowMobile = i >= cv.stats.length - 2;
+          return (
             <div
-              className="font-serif-news text-[clamp(40px,6vw,80px)] leading-none mb-3"
-              style={{ color: "var(--accent)" }}
+              key={i}
+              className={`py-7 md:py-10 px-4 sm:px-6 md:px-8 border-b ${
+                lastCol ? "" : "border-r"
+              } md:border-r ${lastColMd ? "md:!border-r-0" : ""} ${
+                bottomRowMobile ? "md:border-b-0" : ""
+              }`}
+              style={{ borderColor: "var(--rule)" }}
             >
-              <CountUp value={s.num} />
+              <div
+                className="font-serif-news text-[clamp(34px,6vw,80px)] leading-none mb-3"
+                style={{ color: "var(--accent)" }}
+              >
+                <CountUp value={s.num} />
+              </div>
+              <div
+                className="font-mono-plex text-[9px] md:text-[9.5px] tracking-[.22em] uppercase whitespace-pre-line leading-tight"
+                style={{ color: "var(--muted)" }}
+              >
+                {s.label}
+              </div>
             </div>
-            <div
-              className="font-mono-plex text-[9.5px] tracking-[.22em] uppercase whitespace-pre-line leading-tight"
-              style={{ color: "var(--muted)" }}
-            >
-              {s.label}
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );

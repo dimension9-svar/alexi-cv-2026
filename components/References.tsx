@@ -8,7 +8,7 @@ export function References() {
   return (
     <section
       id="references"
-      className="max-w-[1280px] mx-auto px-6 md:px-12 py-14 md:py-24"
+      className="max-w-[1280px] mx-auto px-5 sm:px-6 md:px-12 py-12 md:py-24"
     >
       <Reveal>
         <h2 className="h-label mb-10 md:mb-14">References</h2>

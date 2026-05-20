@@ -68,7 +68,9 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: background-color .6s cubic-bezier(.2,.7,.2,1), color .6s cubic-bezier(.2,.7,.2,1);
+  overflow-x: clip;
 }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 body {
   background-image:
     radial-gradient(var(--paper-grain) 1px, transparent 1px),
@@ -111,7 +113,7 @@ html.lenis, html.lenis body { height: auto; }
 
 /* Scroll progress bar */
 .scroll-progress {
-  position: fixed; top: 0; left: 0; right: 0; height: 2px;
+  position: fixed; top: 6px; left: 0; right: 0; height: 2px;
   background: var(--accent);
   transform-origin: 0 0;
   z-index: 60;
@@ -207,10 +209,11 @@ html.theme-ink .cursor-blob { mix-blend-mode: screen; opacity: .5; }
 .btn {
   display: inline-flex; align-items: center; gap: 10px;
   background: var(--ink); color: var(--paper);
-  padding: 12px 18px;
+  padding: 14px 18px;
   font-family: var(--font-plex-mono), monospace;
   font-size: 10.5px; letter-spacing: .18em; text-transform: uppercase;
   cursor: pointer; border: 0;
+  min-height: 44px;
   transition: background-color .25s ease, color .25s ease, transform .25s ease;
 }
 .btn:hover { background: var(--accent); transform: translateY(-1px); }

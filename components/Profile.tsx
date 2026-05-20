@@ -8,7 +8,7 @@ export function Profile() {
   return (
     <section
       id="profile"
-      className="max-w-[1280px] mx-auto px-6 md:px-12 py-14 md:py-24 grid md:grid-cols-[260px_1fr] gap-10 md:gap-20"
+      className="max-w-[1280px] mx-auto px-5 sm:px-6 md:px-12 py-12 md:py-24 grid md:grid-cols-[260px_1fr] gap-8 md:gap-20"
     >
       <div>
         <Reveal>
@@ -21,7 +21,7 @@ export function Profile() {
 
       <div>
         <StaggerGroup stagger={0.08}>
-          <motion.div variants={staggerItem} className="relative pl-6">
+          <motion.div variants={staggerItem} className="relative pl-5 md:pl-6">
             <motion.span
               aria-hidden
               initial={{ scaleY: 0 }}
@@ -31,7 +31,7 @@ export function Profile() {
               className="absolute left-0 top-2 bottom-2 w-[2px] origin-top"
               style={{ background: "var(--accent)" }}
             />
-            <p className="font-serif-news text-[clamp(22px,2.6vw,36px)] leading-[1.28] max-w-[34ch]">
+            <p className="font-serif-news text-[clamp(19px,2.6vw,36px)] leading-[1.35] md:leading-[1.28] max-w-[34ch]">
               {cv.profileLead.split(/(10\+ years)/).map((part, i) =>
                 part === "10+ years" ? (
                   <em
@@ -49,7 +49,7 @@ export function Profile() {
           </motion.div>
           <motion.p
             variants={staggerItem}
-            className="mt-8 text-[15px] md:text-[16px] leading-[1.65] max-w-[64ch] pl-6"
+            className="mt-6 md:mt-8 text-[14.5px] md:text-[16px] leading-[1.65] max-w-[64ch] pl-5 md:pl-6"
             style={{ color: "var(--ink)" }}
           >
             {cv.profileBody}

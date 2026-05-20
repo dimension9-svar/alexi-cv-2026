@@ -18,8 +18,8 @@ export function Marquee() {
   const doubled = [...items, ...items];
 
   return (
-    <section className="relative overflow-hidden py-10 md:py-14 border-y" style={{ borderColor: "var(--rule)" }}>
-      <div className="marquee-track flex whitespace-nowrap gap-12 md:gap-20 font-serif-news text-[clamp(36px,7vw,96px)] leading-none">
+    <section className="relative overflow-hidden py-8 md:py-14 border-y" style={{ borderColor: "var(--rule)" }}>
+      <div className="marquee-track flex whitespace-nowrap gap-10 md:gap-20 font-serif-news text-[clamp(28px,7vw,96px)] leading-none">
         {doubled.map((it, i) => (
           <span key={i} className="inline-flex items-center gap-12 md:gap-20">
             <span style={{ color: i % 2 === 0 ? "var(--ink)" : "var(--accent)" }}>{it}</span>

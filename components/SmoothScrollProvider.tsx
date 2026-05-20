@@ -7,7 +7,8 @@ export function SmoothScrollProvider({ children }: { children: React.ReactNode }
   useEffect(() => {
     if (typeof window === "undefined") return;
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduce) return;
+    const touchOnly = window.matchMedia("(hover: none) and (pointer: coarse)").matches;
+    if (reduce || touchOnly) return;
 
     const lenis = new Lenis({
       duration: 1.05,

@@ -18,7 +18,7 @@ export function Hero() {
   return (
     <header
       ref={ref}
-      className="relative max-w-[1280px] mx-auto px-6 md:px-12 pt-28 md:pt-36 pb-14 md:pb-20"
+      className="relative max-w-[1280px] mx-auto px-5 sm:px-6 md:px-12 pt-20 sm:pt-28 md:pt-36 pb-12 md:pb-20"
     >
       <div className="flex items-center justify-between mb-8 md:mb-14">
         <motion.span
@@ -40,7 +40,7 @@ export function Hero() {
         </motion.span>
       </div>
 
-      <div className="grid md:grid-cols-[1fr_auto] gap-10 md:gap-14 items-end">
+      <div className="grid md:grid-cols-[1fr_auto] gap-8 md:gap-14 items-end">
         <div className="min-w-0">
           <AnimatedName name={cv.name} />
 
@@ -60,7 +60,7 @@ export function Hero() {
 
           <motion.p
             style={{ y: taglineY }}
-            className="font-serif-news mt-8 md:mt-10 text-[clamp(20px,2.4vw,30px)] leading-[1.32] max-w-[28ch]"
+            className="font-serif-news mt-6 md:mt-10 text-[clamp(17px,2.4vw,30px)] leading-[1.4] md:leading-[1.32] max-w-[28ch]"
           >
             {words.map((w, i) => (
               <span key={i} className="inline-block reveal-mask mr-[0.28em]">
@@ -92,7 +92,7 @@ export function Hero() {
           <div
             className="relative overflow-hidden"
             style={{
-              width: "clamp(160px, 18vw, 240px)",
+              width: "clamp(120px, 28vw, 240px)",
               aspectRatio: "1 / 1",
               borderRadius: "999px",
               boxShadow:
@@ -104,7 +104,7 @@ export function Hero() {
               alt={`Portrait of ${cv.name}`}
               fill
               priority
-              sizes="240px"
+              sizes="(max-width: 768px) 160px, 240px"
               style={{ objectFit: "cover", objectPosition: "center 22%", filter: "grayscale(.3) contrast(1.04)" }}
             />
           </div>
