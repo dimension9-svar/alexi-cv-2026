@@ -131,7 +131,7 @@ function PortraitFrame({ size }: { size: "mobile" | "desktop" }) {
   const dims =
     size === "mobile"
       ? { width: "clamp(74px, 16vw, 110px)", sizes: "110px" }
-      : { width: "clamp(180px, 16vw, 232px)", sizes: "232px" };
+      : { width: "clamp(150px, 13vw, 196px)", sizes: "196px" };
   return (
     <div
       className="relative overflow-hidden"

@@ -4,6 +4,7 @@ import { SmoothScrollProvider } from "@/components/SmoothScrollProvider";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { CursorBlob } from "@/components/CursorBlob";
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
+import { TopNav } from "@/components/TopNav";
 import "./globals.css";
 
 const plexSans = IBM_Plex_Sans({
@@ -57,11 +58,13 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body>
+        <span id="top" />
         <ScrollProgress />
         <div className="top-strip no-print" aria-hidden>
           <i /><i /><i />
         </div>
         <CursorBlob />
+        <TopNav />
         <SmoothScrollProvider>{children}</SmoothScrollProvider>
         <ThemeSwitcher />
       </body>

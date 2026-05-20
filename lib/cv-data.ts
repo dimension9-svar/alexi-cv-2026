@@ -104,7 +104,7 @@ export const cv = {
     },
   ],
   references: [
-    { name: "Mr. Riaan du Plessis", company: "Massbuild", phone: "+27 39 940 0311" },
+    { name: "Mr. Jaleel Ravat", company: "Massbuild — Current Regional Manager", phone: "+27 79 603 7834" },
     { name: "Mr. Zunaid Habib", company: "Massbuild", phone: "+27 82 893 3503" },
   ],
 } as const;

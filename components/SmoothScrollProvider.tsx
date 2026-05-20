@@ -25,8 +25,21 @@ export function SmoothScrollProvider({ children }: { children: React.ReactNode }
     };
     raf = requestAnimationFrame(tick);
 
+    const onAnchorClick = (e: MouseEvent) => {
+      const target = (e.target as HTMLElement | null)?.closest?.('a[href^="#"]') as HTMLAnchorElement | null;
+      if (!target) return;
+      const hash = target.getAttribute("href");
+      if (!hash || hash === "#") return;
+      const el = document.querySelector(hash);
+      if (!el) return;
+      e.preventDefault();
+      lenis.scrollTo(el as HTMLElement, { offset: -72, duration: 1.0 });
+    };
+    document.addEventListener("click", onAnchorClick);
+
     return () => {
       cancelAnimationFrame(raf);
+      document.removeEventListener("click", onAnchorClick);
       lenis.destroy();
     };
   }, []);
