@@ -10,7 +10,7 @@ export function AnimatedName({ name }: { name: string }) {
 
   return (
     <h1
-      className="font-display font-extrabold leading-[0.82] tracking-[-0.035em] text-[clamp(44px,12vw,168px)]"
+      className="font-display font-extrabold leading-[0.82] tracking-[-0.035em] text-[clamp(40px,9.5vw,128px)]"
       aria-label={name}
       style={{ color: "var(--ink)" }}
     >

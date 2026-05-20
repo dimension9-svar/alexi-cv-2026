@@ -18,10 +18,10 @@ export function Hero() {
   return (
     <header
       ref={ref}
-      className="relative max-w-[1280px] mx-auto px-5 sm:px-6 md:px-12 pt-14 sm:pt-16 md:pt-20 pb-8 md:pb-14"
+      className="relative max-w-[1280px] mx-auto px-5 sm:px-6 md:px-12 pt-10 sm:pt-12 md:pt-14 pb-6 md:pb-10"
     >
       {/* Top row: eyebrow + (mobile portrait on right) / (desktop CV label) */}
-      <div className="flex items-start justify-between gap-4 mb-4 md:mb-8">
+      <div className="flex items-start justify-between gap-4 mb-3 md:mb-5">
         <motion.span
           className="eyebrow mt-1 md:mt-2"
           initial={{ opacity: 0 }}
@@ -53,7 +53,7 @@ export function Hero() {
       </div>
 
       {/* Name + desktop portrait */}
-      <div className="grid md:grid-cols-[1fr_auto] gap-6 md:gap-12 items-start">
+      <div className="grid md:grid-cols-[1fr_auto] gap-5 md:gap-10 items-start">
         <div className="min-w-0">
           <AnimatedName name={cv.name} />
 
@@ -73,7 +73,7 @@ export function Hero() {
 
           <motion.p
             style={{ y: taglineY }}
-            className="font-serif-news mt-4 md:mt-6 text-[clamp(17px,2.4vw,30px)] leading-[1.4] md:leading-[1.32] max-w-[34ch]"
+            className="font-serif-news mt-3 md:mt-5 text-[clamp(15.5px,1.7vw,22px)] leading-[1.45] md:leading-[1.4] max-w-[42ch]"
           >
             {words.map((w, i) => (
               <span key={i} className="inline-block reveal-mask mr-[0.28em]">
@@ -103,7 +103,7 @@ export function Hero() {
           transition={{ delay: 0.4, duration: 1.1, ease: [0.2, 0.7, 0.2, 1] }}
           className="relative shrink-0 hidden md:block mt-0"
         >
-          <PortraitFrame size="desktop" />
+          <PortraitFrame size="desktop" />{/* sized down below */}
           <div
             className="absolute -bottom-3 -left-4 font-mono-plex text-[9px] tracking-[.22em] uppercase opacity-60"
             style={{ color: "var(--muted)" }}
@@ -121,7 +121,7 @@ export function Hero() {
         whileInView={{ scaleX: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1.2, ease: [0.2, 0.7, 0.2, 1], delay: 0.2 }}
-        className="rule mt-8 md:mt-14 origin-left"
+        className="rule mt-6 md:mt-10 origin-left"
       />
     </header>
   );
@@ -171,7 +171,7 @@ function ContactStrip() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: 1.3, duration: .8 }}
-      className="mt-8 md:mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-12"
+      className="mt-6 md:mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-10"
     >
       {items.map((it) => (
         <div key={it.label} className="flex flex-col gap-1">
