@@ -60,12 +60,14 @@ export const cv = {
       period: "Jan 2021 — Present",
       location: "KZN & Gauteng",
       blurb:
-        "Promoted internally to manage a larger client base and higher-volume sales activity across multiple regions in South Africa.",
+        "Promoted internally to manage a larger client base and higher-volume sales activity across multiple regions in South Africa, with expanded ownership of account financials and credit control.",
       bullets: [
-        "Manage an expanded portfolio of contractor and trade accounts across KZN and Gauteng, supporting high-volume regional sales.",
-        "Prepare quotes, process orders, and coordinate stock availability and on-site delivery for client-specific requirements.",
+        "Manage an expanded portfolio of contractor and trade accounts across KZN and Gauteng, owning the full customer lifecycle from quotation through delivery.",
+        "Prepare sales quotations, process orders, and coordinate stock availability and on-site delivery logistics for client-specific requirements.",
+        "Collect and control customer funding — managing account balances, payment follow-up, and overdue exposure across an active client base.",
+        "Collaborate closely with the pre-legal team on disputed and high-risk accounts to recover funds while protecting long-term client relationships.",
         "Build and maintain long-term client relationships through consistent communication, accurate pricing, and reliable follow-through.",
-        "Liaise between clients, internal sales, stock, and delivery teams to ensure accurate, on-time order fulfilment.",
+        "Liaise between clients and internal sales, stock, and delivery teams to ensure accurate, on-time order fulfilment.",
       ],
     },
     {
